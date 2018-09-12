@@ -1,0 +1,53 @@
+.right-content {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: #AAAAAA;
+  float: right;
+  .group-title {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    padding: 0 40px;
+    position: relative;
+    border-bottom: solid #eeeeee 1px;
+    box-sizing: border-box;
+    .group-name {
+      padding-top: 35px;
+      font-size: 20px;
+      color: #333333;
+    }
+    .group-menber {
+      padding-top: 15px;
+      font-size: 12px;
+      color: #999999;
+    }
+    .edit {
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      border: solid #38AEF0 1px;
+      padding: 0 20px;
+      line-height: 40px;
+    }
+  }
+  .chat-space {
+    padding: 0 40px;
+    .member-name {
+      margin-top: 46px;
+      font-size: 16px;
+      display: inline-block;
+      font-weight: bold;
+      color: #434A54;
+    }
+    .time {
+      font-size: 12px;
+      color: #999999;
+      margin-left: 10px;
+    }
+    .member-text {
+      padding-top: 10px;
+      font-size: 14px;
+      color: #434A54;
+    }
+  }
+}
