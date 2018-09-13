@@ -1,18 +1,24 @@
 %div.left-content
-    %div.user-content
-        %p.user-name seo
-        %i.fas.fa-edit
-        %i.fas.fa-cog
-    %div.chat-group
-        %p.chat-name seo
-        %p.chat-text seo
+  %div.user-content
+    %p.user-name seo
+    %a.fa.fa-edit{href: ""}
+    %a.fa.fa-cog{href: ""}
+  %div.chat-group
+    %p.chat-name seo
+    %p.chat-text seo
 
 %div.right-content
-    %div.group-title
-        %p.group-name sample
-        %p.group-member Members: seo neko
-        %p.edit edit
-    %div.chat-space
-        %p.member-name seo
-        %span.time 2016/09/21 06:16:55
-        %p.member-text 初めまして
+  %div.group-title
+    %p.group-name sample
+    %p.group-member Members: seo neko
+    %a.edit{href: ""} edit
+  %div.chat-space
+    %p.member-name seo
+    %span.time 2016/09/21 06:16:55
+    %p.member-text 初めまして
+  %form.entry-form
+    %input.entry-sheet{placeholder: "type a message"}
+    %label.upload-label{for: "upload-icon"}
+      %i.fa.fa-image
+      %input{type: "file", id: "upload-icon", style: "display:none"}
+    %input.send{type: "submit", value: "Send"}

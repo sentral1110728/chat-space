@@ -3,6 +3,7 @@
   width: calc(100vw - 300px);
   background-color: #AAAAAA;
   float: right;
+  position: relative;
   .group-title {
     background-color: white;
     width: 100%;
@@ -25,6 +26,7 @@
       position: absolute;
       top: 28px;
       right: 40px;
+      color: #38AEF0;
       border: solid #38AEF0 1px;
       padding: 0 20px;
       line-height: 40px;
@@ -50,4 +52,38 @@
       color: #434A54;
     }
   }
+  .entry-form {
+    background-color: #eeeeee;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 20px 40px;
+    border-color: #eeeeee;
+    .entry-sheet {
+      height: 50px;
+      width: calc(100% - 154px);
+      padding-left: 10px;
+      font-size: 16px;
+    }
+    .fa {
+      color: black;
+      position: absolute;
+      right: 150px;
+      bottom: 15px;
+    }
+    .send {
+      background-color: #38AEF0;
+      color: white;
+      float: right;
+      height: 50px;
+      width: 100px;
+      margin-right: 25px;
+    }
+  }
 }
+
+
+
