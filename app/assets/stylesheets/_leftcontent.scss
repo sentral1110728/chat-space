@@ -1,5 +1,5 @@
 .left-content {
-  background-color: #2f3e51;
+  background-color: $side_blue_light;
   width: 300px;
   height: 100vh;
   color: #FFFFFF;
@@ -7,7 +7,7 @@
   .user-content {
     height: 100px;
     padding: 0 20px;
-    background-color: #253141;
+    background-color: $side_blue_dark;
     .user-name {
       font-size: 16px;
       font-weight: bold;

@@ -1,18 +1,24 @@
-%div.left-content
-  %div.user-content
-    %p.user-name seo
-    %a.fa.fa-edit{href: ""}
-    %a.fa.fa-cog{href: ""}
-  %div.chat-group
+.div.left-content
+  .div.user-content
+    %h3.user-name
+      = current_user.name
+    %ul.header__lists
+      %li.list
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
+      %li.list
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+  .div.chat-group
     %p.chat-name seo
     %p.chat-text seo
 
-%div.right-content
-  %div.group-title
+.div.right-content
+  .div.group-title
     %p.group-name sample
     %p.group-member Members: seo neko
     %a.edit{href: ""} edit
-  %div.chat-space
+  .div.chat-space
     %p.member-name seo
     %span.time 2016/09/21 06:16:55
     %p.member-text 初めまして
@@ -22,3 +28,8 @@
       %i.fa.fa-image
       %input{type: "file", id: "upload-icon", style: "display:none"}
     %input.send{type: "submit", value: "Send"}
+
+
+
+
+
