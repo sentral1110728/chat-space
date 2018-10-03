@@ -6,9 +6,7 @@
       %p.group-member Members: seo neko
       %a.edit{href: ""} edit
     .chat-space
-      %p.member-name name
-      %span.time 2018/9/28 10:11:13
-      %p.member-text 初めまして
+      = render @messages
     .entry-form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'entry-sheet', placeholder: 'type a message'
