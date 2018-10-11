@@ -34,6 +34,7 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryGirl::Syntax::Methods
+  Dir[Rails.root.join('spec/support/controller_macros.rb')].each { |f| require f }
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include ControllerMacros, type: :controller
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
