@@ -26,8 +26,8 @@
       position: absolute;
       top: 28px;
       right: 40px;
-      color: #38AEF0;
-      border: solid #38AEF0 1px;
+      color: $light_blue;
+      border: solid $light_blue 1px;
       padding: 0 20px;
       line-height: 40px;
     }
@@ -74,8 +74,11 @@
       right: 150px;
       bottom: 15px;
     }
+    .hidden {
+      display:none;
+    }
     .send {
-      background-color: #38AEF0;
+      background-color: $light_blue;
       color: white;
       float: right;
       height: 50px;
