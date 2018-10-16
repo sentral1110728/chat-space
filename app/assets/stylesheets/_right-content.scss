@@ -1,15 +1,19 @@
 .right-content {
-  height: 100vh;
+  height: calc( 100vh - 200px);
   width: calc(100vw - 300px);
   background-color: #AAAAAA;
   float: right;
+  overflow-y: scroll;
   position: relative;
+  padding: 100px 0;
+  z-index: 1;
   .group-title {
     background-color: white;
-    width: 100%;
+    width: calc(100vw - 300px);
     height: 100px;
     padding: 0 40px;
-    position: relative;
+    position: fixed;
+    top: 0;
     border-bottom: solid #eeeeee 1px;
     box-sizing: border-box;
     .group-name {
@@ -55,10 +59,10 @@
   .entry-form {
     background-color: #eeeeee;
     height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 300px;
     border-style: solid;
     border-width: 20px 40px;
     border-color: #eeeeee;
