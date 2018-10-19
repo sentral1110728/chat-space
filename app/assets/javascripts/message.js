@@ -32,5 +32,8 @@ $(function() {
       $('.send').prop('disabled',false);
       $('.chat-space').animate({ scrollTop: $('.chat-space')[0].scrollHeight});
     })
+    fail(function() {
+      alert('error');
+    })
   })
 });
