@@ -1,10 +1,9 @@
-- @messages.each do |message|
-  %p.member-name
-    = message.user.name
-  %span.time
-    = message.created_at
-  .lower-message
-    - if message.content.present?
-      %p.member-text
-        =message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+%p.member-name
+  = message.user.name
+%span.time
+  = message.created_at
+.lower-message
+  - if message.content.present?
+    %p.member-text
+      =message.content
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

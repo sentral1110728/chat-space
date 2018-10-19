@@ -1,15 +1,17 @@
 .right-content {
-  height: 100vh;
+  height: calc( 100vh - 200px);
   width: calc(100vw - 300px);
   background-color: #AAAAAA;
   float: right;
   position: relative;
+  padding-bottom: 100px;
   .group-title {
     background-color: white;
-    width: 100%;
+    width: calc(100vw - 300px);
     height: 100px;
     padding: 0 40px;
-    position: relative;
+    position: sticky;
+    top: 0;
     border-bottom: solid #eeeeee 1px;
     box-sizing: border-box;
     .group-name {
@@ -34,6 +36,8 @@
   }
   .chat-space {
     padding: 0 40px;
+    height: 100%;
+    overflow: scroll;
     .member-name {
       margin-top: 46px;
       font-size: 16px;
@@ -55,10 +59,10 @@
   .entry-form {
     background-color: #eeeeee;
     height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 300px;
     border-style: solid;
     border-width: 20px 40px;
     border-color: #eeeeee;
@@ -81,6 +85,9 @@
       background-color: $light_blue;
       color: white;
       float: right;
+      position: absolute;
+      top: 2px;
+      right: 0;
       height: 50px;
       width: 100px;
       margin-right: 25px;
