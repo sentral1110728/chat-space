@@ -10,7 +10,7 @@ $(function() {
                   <p class="member-text">
                     ${ message.content }
                   </p>
-                  ${ message.image }
+                  <img class="lower-message__image" src="${ message.image }">
                 </div>`
     return html
   }
@@ -29,8 +29,8 @@ $(function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.chat-space').append(html)
-      $('.member-text').val('')
-      $('.lower-message__image').val('')
+      $('.send').prop('disabled',false);
+      $('.chat-space').animate({ scrollTop: $('.chat-space')[0].scrollHeight});
     })
   })
 });

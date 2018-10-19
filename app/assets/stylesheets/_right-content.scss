@@ -3,15 +3,14 @@
   width: calc(100vw - 300px);
   background-color: #AAAAAA;
   float: right;
-  overflow-y: scroll;
   position: relative;
-  padding: 100px 0;
+  padding-bottom: 100px;
   .group-title {
     background-color: white;
     width: calc(100vw - 300px);
     height: 100px;
     padding: 0 40px;
-    position: fixed;
+    position: sticky;
     top: 0;
     border-bottom: solid #eeeeee 1px;
     box-sizing: border-box;
@@ -37,6 +36,8 @@
   }
   .chat-space {
     padding: 0 40px;
+    height: 100%;
+    overflow: scroll;
     .member-name {
       margin-top: 46px;
       font-size: 16px;
@@ -84,6 +85,9 @@
       background-color: $light_blue;
       color: white;
       float: right;
+      position: absolute;
+      top: 2px;
+      right: 0;
       height: 50px;
       width: 100px;
       margin-right: 25px;
