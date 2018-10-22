@@ -54,14 +54,14 @@ $(function() {
     });
   });
 
-  $("#user-search-result").on("click", ".user-search-add", function(){
-    var user_name = $(this).data('userName');
-    var user_id = $(this).data('userId');
-    appendGroup(user_id,user_name);
+  $(document).on("click", ".user-search-add", function(){
+    var user_id = $(this).attr('data-user-id');
+    var user_name = $(this).attr('data-user-name')
+    appendGroup(user_id, user_name);
     $(this).parent().remove();
   });
 
-  $("#chat-group-users").on("click", ".user-search-remove", function(){
+  $(document).on("click", ".user-search-remove", function(){
     $(this).parent().remove();
   });
 });

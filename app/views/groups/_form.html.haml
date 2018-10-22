@@ -40,6 +40,7 @@
         #chat-group-user-22.chat-group-user.clearfix
           %input{name: "chat_group[user_ids][]", type: "hidden", value: "22"}/
           %p.chat-group-user__name
+            = current_user.name
 
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       /
