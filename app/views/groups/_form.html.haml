@@ -37,8 +37,8 @@
       / = f.collection_check_boxes :user_ids, User.all, :id, :name
 
       #chat-group-users
-        #chat-group-user-22.chat-group-user.clearfix
-          %input{name: "chat_group[user_ids][]", type: "hidden", value: "22"}/
+        #chat-group-user.chat-group-user.clearfix
+          %input{name: "chat_group[user_ids][]", type: "hidden"}/
           %p.chat-group-user__name
             = current_user.name
 
