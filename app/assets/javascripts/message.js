@@ -1,6 +1,10 @@
 $(function() {
   function buildHTML(message) {
-    var html = `<p class="member-name">
+    var insertImage = '';
+    if (message.image) {
+      insertImage = `<img class="lower-message__image" src="${ message.image }">`;
+    }
+    var html = `<p class="member-name" data-message-id="${ message.id }">
                   ${ message.user_name }
                 </p>
                 <span class="time">
@@ -10,9 +14,9 @@ $(function() {
                   <p class="member-text">
                     ${ message.content }
                   </p>
-                  <img class="lower-message__image" src="${ message.image }">
+                  ${ insertImage }
                 </div>`
-    return html
+    return html;
   }
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
@@ -28,24 +32,39 @@ $(function() {
     })
     .done(function(data) {
       var html = buildHTML(data);
-      $('.chat-space').append(html)
+      $('.chat-space').append(html);
       $('.send').prop('disabled',false);
       $('.chat-space').animate({ scrollTop: $('.chat-space')[0].scrollHeight});
     })
-    fail(function() {
+    .fail(function() {
       alert('error');
-    })
+    });
   })
 
-  setInterval(function() {
-  $.ajax({
-    url: location.href.json
-  })
-  .done(function(data) {
-  })
-  .fail(function(data) {
-  });
-  } else {
-clearInterval(interval);
-  } , 5000);
+  var interval =setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+      var message_id = $('.member-name:last').attr('data-message-id');
+      console.log(message_id)
+      $.ajax({
+        url: window.location.href,
+        type: 'GET',
+        dataType: 'json'
+      })
+      .done(function(json) {
+        var insertHTML = '';
+        $.each(json, function(i, json){
+          insertHTML += buildHTML(message);
+        })
+        $('.chat-space').append(insertHTML);
+      })
+      .fail(function(json) {
+        alert('自動送信に失敗');
+        console.log(alert);
+      });
+    } else {
+      clearInterval(interval);
+    }
+  },5000);
+
 });
+
