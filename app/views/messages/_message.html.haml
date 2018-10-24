@@ -1,4 +1,4 @@
-%p.member-name
+%p.member-name{ "data-message-id": "#{message.id}" }
   = message.user.name
 %span.time
   = message.created_at
