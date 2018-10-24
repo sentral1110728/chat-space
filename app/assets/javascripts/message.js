@@ -47,7 +47,7 @@ $(function() {
       $.ajax({
         url: window.location.href,
         type: 'GET',
-        data: { message: message_id},
+        data: { id: message_id },
         dataType: 'json'
       })
       .done(function(json) {
