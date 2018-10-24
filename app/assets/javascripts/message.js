@@ -53,9 +53,9 @@ $(function() {
       .done(function(json) {
         var insertHTML = '';
         $.each(json, function(i, json){
-          insertHTML += buildHTML(message);
+          insertHTML += buildHTML(json);
         })
-        $('.chat-space').append(insertHTML);
+        $('.chat-space').append(insertHTML).animate({ scrollTop: $('.chat-space')[0].scrollHeight});
       })
       .fail(function(json) {
         alert('自動送信に失敗');
