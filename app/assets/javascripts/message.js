@@ -44,10 +44,10 @@ $(function() {
   var interval =setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
       var message_id = $('.member-name:last').attr('data-message-id');
-      console.log(message_id)
       $.ajax({
         url: window.location.href,
         type: 'GET',
+        data: { message: message_id},
         dataType: 'json'
       })
       .done(function(json) {
@@ -59,7 +59,6 @@ $(function() {
       })
       .fail(function(json) {
         alert('自動送信に失敗');
-        console.log(alert);
       });
     } else {
       clearInterval(interval);
