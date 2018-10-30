@@ -64,6 +64,5 @@ $(function() {
       clearInterval(interval);
     }
   },5000);
-
 });
 
