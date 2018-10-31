@@ -4,7 +4,7 @@
     .group-title
       %p.group-name sample
       %p.group-member Members: seo neko
-      %a.edit{href: ""} edit
+      %a.edit{href: "/groups/#{params[:group_id]}/edit"} edit
     .chat-space
       = render @messages
     .entry-form
